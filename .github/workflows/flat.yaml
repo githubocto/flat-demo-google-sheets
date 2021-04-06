@@ -1,0 +1,23 @@
+name: flat
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+  schedule:
+    - cron: '0 0 * * *'
+    
+jobs:
+  scheduled:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Setup deno
+      uses: denolib/setup-deno@v2
+    - name: Check out repo
+      uses: actions/checkout@v2
+    - name: Fetch data
+      uses: githubocto/flat@v1
+      with:
+        http_url: 'https://spreadsheets.google.com/feeds/cells/1coaXmKes8b3GUFDGbmb-Hj4bek1HOEI-WCmOF4tIHwI/1/public/values'
+
