@@ -20,10 +20,6 @@ Inside `.github/workflows/flat.yaml`:
         downloaded_filename: google-sheet.json
 ```
 
-## Postprocessing
-
-Refer to the [Flat postprocessing library](https://github.com/githubocto/flat-postprocessing) for more helper functions and examples for writing postprocessing scripts.
-
 ## License
 
 [MIT](LICENSE)
