@@ -2,8 +2,8 @@ name: flat
 
 on:
   push:
-    branches:
-      - main
+    paths:
+      - .github/workflows/flat.yml # Only run a new workflow every time this file (flat.yaml) file changes
   workflow_dispatch:
   schedule:
     - cron: '0 0 * * *'
@@ -17,8 +17,12 @@ jobs:
     - name: Check out repo
       uses: actions/checkout@v2
     - name: Fetch data
-      uses: githubocto/flat@v1
+      uses: githubocto/flat@v2
       with:
-        http_url: 'https://spreadsheets.google.com/feeds/cells/1coaXmKes8b3GUFDGbmb-Hj4bek1HOEI-WCmOF4tIHwI/1/public/full'      
-        # http_url: 'https://spreadsheets.google.com/feeds/cells/1coaXmKes8b3GUFDGbmb-Hj4bek1HOEI-WCmOF4tIHwI/1/public/full?alt=json'
-
+        http_url: 'https://spreadsheets.google.com/feeds/cells/1coaXmKes8b3GUFDGbmb-Hj4bek1HOEI-WCmOF4tIHwI/1/public/full' 
+        downloaded_filename: google-sheet.xml
+    - name: Fetch data
+      uses: githubocto/flat@v2
+      with:
+        http_url: 'https://spreadsheets.google.com/feeds/cells/1coaXmKes8b3GUFDGbmb-Hj4bek1HOEI-WCmOF4tIHwI/1/public/full?alt=json' 
+        downloaded_filename: google-sheet.json
