@@ -13,7 +13,7 @@ Inside `.github/workflows/flat.yaml`:
       with:
         http_url: 'https://spreadsheets.google.com/feeds/cells/1coaXmKes8b3GUFDGbmb-Hj4bek1HOEI-WCmOF4tIHwI/1/public/full' 
         downloaded_filename: google-sheet.xml
-    - name: Fetch data
+- name: Fetch data
       uses: githubocto/flat@v2
       with:
         http_url: 'https://spreadsheets.google.com/feeds/cells/1coaXmKes8b3GUFDGbmb-Hj4bek1HOEI-WCmOF4tIHwI/1/public/full?alt=json' 
