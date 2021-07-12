@@ -4,7 +4,7 @@ This demo is part of a larger Flat Data project created by [GitHub OCTO](https:/
 
 ## What this demo does
 
-This repository uses a [Flat Data Action](https://octo.github.com/blog/flat-data) to fetch a public Google Sheet as a JSON and XML file. Specifically it chains together two flat steps, each one downloading the sheet as a different format.
+This repository uses a [Flat Data Action](https://github.com/githubocto/flat) to fetch a public Google Sheet as a JSON and XML file. Specifically it chains together two flat steps, each one downloading the sheet as a different format.
 
 Inside `.github/workflows/flat.yaml`:
 ```yaml
