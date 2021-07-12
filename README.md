@@ -9,12 +9,12 @@ This repository uses a [Flat Data Action](https://octo.github.com/blog/flat-data
 Inside `.github/workflows/flat.yaml`:
 ```yaml
 - name: Fetch data
-      uses: githubocto/flat@v2
+      uses: githubocto/flat@v3
       with:
         http_url: 'https://spreadsheets.google.com/feeds/cells/1coaXmKes8b3GUFDGbmb-Hj4bek1HOEI-WCmOF4tIHwI/1/public/full' 
         downloaded_filename: google-sheet.xml
 - name: Fetch data
-      uses: githubocto/flat@v2
+      uses: githubocto/flat@v3
       with:
         http_url: 'https://spreadsheets.google.com/feeds/cells/1coaXmKes8b3GUFDGbmb-Hj4bek1HOEI-WCmOF4tIHwI/1/public/full?alt=json' 
         downloaded_filename: google-sheet.json
