@@ -21,10 +21,10 @@ jobs:
     - name: Fetch data
       uses: githubocto/flat@v3
       with:
-        http_url: 'https://spreadsheets.google.com/feeds/cells/1coaXmKes8b3GUFDGbmb-Hj4bek1HOEI-WCmOF4tIHwI/1/public/full' 
-        downloaded_filename: google-sheet.xml
-    - name: Fetch data
-      uses: githubocto/flat@v3
-      with:
-        http_url: 'https://spreadsheets.google.com/feeds/cells/1coaXmKes8b3GUFDGbmb-Hj4bek1HOEI-WCmOF4tIHwI/1/public/full?alt=json' 
-        downloaded_filename: google-sheet.json
+        http_url: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQT7KW2U7o4zh2Sh5qpTl42OQzbKZG-glDd3rVcXhvQ1MtXTQiitvGEV6xvkfrXAn1dYADV1qLc2CEC/pub?output=csv' 
+        downloaded_filename: google-sheet.csv
+#     - name: Fetch data
+#       uses: githubocto/flat@v3
+#       with:
+#         http_url: 'https://spreadsheets.google.com/feeds/cells/1coaXmKes8b3GUFDGbmb-Hj4bek1HOEI-WCmOF4tIHwI/1/public/full?alt=json' 
+#         downloaded_filename: google-sheet.json
